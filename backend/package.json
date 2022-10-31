@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fieldelm/stableity.git"
+  },
+  "author": "Reka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fieldelm/stableity/issues"
+  },
+  "homepage": "https://github.com/Fieldelm/stableity#readme",
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
