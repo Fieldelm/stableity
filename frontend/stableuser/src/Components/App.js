@@ -1,7 +1,7 @@
 
-import './style/App.css';
+import '../style/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './pics/horse.png';
+import logo from '../pics/horse.png';
 import Container from 'react-bootstrap/Container';
 
 
