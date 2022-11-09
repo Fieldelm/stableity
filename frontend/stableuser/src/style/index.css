@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color: antiquewhite;
 }
 
 code {
@@ -12,6 +13,7 @@ code {
     monospace;
 }
 
-.main_logo{height: 200px;
-  width: 250px;
+.main_logo{
+  height: 17%;
+  width: 22%;
 }

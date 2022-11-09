@@ -1,25 +1,18 @@
 
-import './App.css';
+import './style/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './pics/horse.png';
+import Container from 'react-bootstrap/Container';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className='main_logo' alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Container fluid>
+          <img src={logo} className='main_logo' alt="logo" />
+
+        </Container>
       </header>
     </div>
   );
