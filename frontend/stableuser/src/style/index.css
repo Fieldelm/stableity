@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- background-color: antiquewhite;
+  background-color: floralwhite;
+ 
 }
 
 code {
@@ -17,3 +18,4 @@ code {
   height: 17%;
   width: 22%;
 }
+
