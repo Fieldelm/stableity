@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './style/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-//import App from './Components/App';
+import App from './Components/App';
 //import reportWebVitals from './reportWebVitals';
 
 import i18next from "i18next";
@@ -13,7 +14,6 @@ import { useTranslation } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18next
-  
   .use(initReactI18next)
   .use(LanguageDetector)
   .use(HttpApi)
@@ -33,10 +33,7 @@ i18next
    },
   })
 
-function App() {
-  const { t } = useTranslation();
-  return <h1 className="font-weight-normal mb-3">{t('welcome_msg')}</h1>
-}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

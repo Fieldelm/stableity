@@ -1,14 +1,16 @@
 import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
-export default function Header() {
+export default function Header({sites}) {
   return (
     <Breadcrumb>
-    
-      <Breadcrumb.Item >
-      Horses
+    {sites.map(({title})=>(
+      <Breadcrumb.Item key= {title}>
+     {title}
       </Breadcrumb.Item>
-      <Breadcrumb.Item >
+    ))}
+     
+      {/* <Breadcrumb.Item >
       Ferrier
       </Breadcrumb.Item>
       <Breadcrumb.Item >
@@ -16,7 +18,7 @@ export default function Header() {
       </Breadcrumb.Item>
       <Breadcrumb.Item >
      Owners
-      </Breadcrumb.Item>
+      </Breadcrumb.Item> */}
     </Breadcrumb>
   )
 }
