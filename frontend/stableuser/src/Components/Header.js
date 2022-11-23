@@ -9,16 +9,6 @@ export default function Header({sites}) {
      {title}
       </Breadcrumb.Item>
     ))}
-     
-      {/* <Breadcrumb.Item >
-      Ferrier
-      </Breadcrumb.Item>
-      <Breadcrumb.Item >
-      Vet
-      </Breadcrumb.Item>
-      <Breadcrumb.Item >
-     Owners
-      </Breadcrumb.Item> */}
     </Breadcrumb>
   )
 }
