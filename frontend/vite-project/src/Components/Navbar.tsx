@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -17,7 +19,7 @@ const Navbar = (props: NavbarProps) => {
   return (
     <nav>
       {props.pages.map((page:Page, index:number) =>(
-        <div key={index}>{page.name}</div>
+        <Link key={index} to = {page.route}>{page.name}</Link>
       ))}
     </nav>
   )
