@@ -7,24 +7,40 @@ import Navbar from './Components/Navbar';
 
 const App = () => {
 
-  const [count, setCount] = useState(0);
 
-  const sites: string[] = ['Horses', 'Ferrier', 'Vet', 'Owners', 'Anything'];
+  type Page = {
+    name: string,
+    route: string
+  }
+
+
+  const pages: Page[] = [
+    {
+      name: 'Horses',
+      route: '/horses'
+    },
+    {
+      name: 'Ferrier',
+      route: '/ferrier'
+    },
+    {
+      name: 'Vet',
+      route: '/vet'
+    },
+    {
+      name: 'Owners',
+      route: '/wners'
+    }
+  ]
 
 
   return (
     <div>
-     <Navbar titles={sites}/>
+      <Navbar pages = {pages}  />
     </div>
- 
-     /*  <div className="App">
-       {sites.map((site, index) => (
-        <div key={index}>{site}</div>
-       ))}
-      </div> */
-   )
+  )
 
-  }
+}
 
 
 
