@@ -66,6 +66,7 @@
   top: 0;
   width: 100%;
 
+
   &__list {
     // float: left;
     display: flex;
@@ -73,23 +74,40 @@
     align-items: center;
     list-style: none;
     height: 100%;
-    padding: 0 4rem;
-  
+    padding: 1 4rem;
+
+    &__logo {
+      text-decoration: none;
+      font-style: italic;
+      color: $glacier;
+      font-weight: bold;
+      font-size: 2rem;
+
+      &:hover {
+        background-color: $mallowHover;
+      }
+
+     
+    }
+
     &__item {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 1.7rem;
       height: 100%;
-    
 
-      a {
+
+      &__link {
         color: $glacier;
-        text-decoration: none;      
+        text-decoration: none;
 
-        &:hover{
+        &:hover {
           background-color: $mallowHover;
-      }
+        }
+        & active {
+          color: $mallowHover;
+        }
       }
 
     }

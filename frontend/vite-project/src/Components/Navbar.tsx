@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 
@@ -19,9 +19,11 @@ const Navbar = (props: NavbarProps) => {
   return (
     <nav className='navbar'>
       <ul className='navbar__list'>
+        <Link className='navbar__list__logo' to='/'>LOGO</Link>
               {props.pages.map((page: Page, index: number) => (
             <li className='navbar__list__item'>
-            <NavLink key={index} to={page.route}>{page.name}</NavLink>
+            <NavLink className='navbar__list__item__link' key={index} to={page.route}>{page.name}
+            </NavLink>
             </li>
           ))}
        
