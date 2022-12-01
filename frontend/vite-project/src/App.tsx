@@ -8,9 +8,14 @@ import Horses from './Components/Horses';
 import Ferrier from './Components/Ferrier';
 import Owners from './Components/Owners';
 import Vet from './Components/Vet';
+import Flag from 'react-world-flags';
+
+
+
 
 const App = () => {
 
+  const languages: string[] = ['gb', 'hu', 'fr'];
 
   type Page = {
     name: string,
@@ -51,15 +56,21 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-   
+
         <Navbar pages={pages} />
-       
+
         <div className='content'>
-        <Routes>
-          {pages.map((page: Page, index: number) => (
-            <Route path={page.route} element={page.element} />
-          ))}
-        </Routes>
+        
+          <div className='flag-container'>
+            {languages.map((lan: string, index: number) => (
+              <Flag key={index} code={lan} value={lan} />
+            ))}
+          </div>
+          <Routes>
+            {pages.map((page: Page, index: number) => (
+              <Route path={page.route} element={page.element} />
+            ))}
+          </Routes>
         </div>
       </BrowserRouter>
     </div>
