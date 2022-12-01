@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -10,17 +10,23 @@ type Page = {
 }
 
 type NavbarProps = {
-  pages : Page []
+  pages: Page[]
 }
 
 
 
 const Navbar = (props: NavbarProps) => {
   return (
-    <nav>
-      {props.pages.map((page:Page, index:number) =>(
-        <Link key={index} to = {page.route}>{page.name}</Link>
-      ))}
+    <nav className='navbar'>
+      <ul className='navbar__list'>
+              {props.pages.map((page: Page, index: number) => (
+            <li className='navbar__list__item'>
+            <NavLink key={index} to={page.route}>{page.name}</NavLink>
+            </li>
+          ))}
+       
+      </ul>
+
     </nav>
   )
 }

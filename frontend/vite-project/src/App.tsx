@@ -36,13 +36,13 @@ const App = () => {
       element: <Ferrier />
     },
     {
-      name: 'Vet',
+      name: 'Veterinary',
       route: '/vet',
       element: <Vet />
     },
     {
       name: 'Owners',
-      route: '/wners',
+      route: '/owners',
       element: <Owners />
     }
   ]
@@ -51,13 +51,16 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
+   
         <Navbar pages={pages} />
+       
+        <div className='content'>
         <Routes>
           {pages.map((page: Page, index: number) => (
             <Route path={page.route} element={page.element} />
           ))}
         </Routes>
-
+        </div>
       </BrowserRouter>
     </div>
   )

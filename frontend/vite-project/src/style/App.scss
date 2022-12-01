@@ -1,4 +1,6 @@
-#root {
+@import '_base';
+
+/*  #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -10,9 +12,11 @@
   padding: 1.5em;
   will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -21,6 +25,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -38,5 +43,64 @@
 
 .read-the-docs {
   color: #888;
+
 }
 
+.navbar {
+  width: 100%;
+  display: inline-block;
+}
+
+ NAVIGATION BAR
+ */
+
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: $mallow;
+  padding: 2rem 4rem;
+  height: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__list {
+    // float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    padding: 0 4rem;
+  
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+      height: 100%;
+    
+
+      a {
+        color: $glacier;
+        text-decoration: none;      
+
+        &:hover{
+          background-color: $mallowHover;
+      }
+      }
+
+    }
+  }
+
+}
+
+
+
+.content {
+  text-align: center;
+  margin-top: 5rem;
+  color: black;
+}
