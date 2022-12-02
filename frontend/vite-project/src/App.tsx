@@ -75,7 +75,6 @@ const App = () => {
         <Navbar pages={pages} />
 
         <div className='content'>
-          {t('horses')}
           <div className='flag-container'>
             {langs.map((lan: any, index: number) => (
               <Flag key={index} code={lan.country_code} onClick={() => changeLanguage(lan.code)} />

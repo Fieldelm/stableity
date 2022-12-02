@@ -1,12 +1,11 @@
 {
-        "welcome_msg": "Stableity keeps your stable organized",
-        "language": "English",
-        "Horses": "Horses",
-        "Horse": "Horse",
-        "horse": "horse",
-        "horses": "horses",
-        "Ferrier": "Ferrier",
-        "Vet": "Veterinary",
-        "Owners": "Owners",
-        "Home": "Home"
-    }
+    "Ferrier": "Ferrier",
+    "Home": "Home",
+    "Horse": "Horse",
+    "horse": "horse",
+    "Horses": "Horses",
+    "horses": "horses",
+    "Owners": "Owners",
+    "Vet": "Veterinary",
+    "welcome_msg": "Stableity keeps your stable organized"
+}

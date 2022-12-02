@@ -1,13 +1,11 @@
 {
-   
-        "welcome_msg": "Stabelity, rendet tart a lovardában",
-        "language": "Magyar",
-        "Horses": "Lovak",
-        "Horse": "Ló",
-        "horse": "ló",
-        "horses": "lovak",
-        "Ferrier": "Patkolás",
-        "Vet": "Állatorvos",
-        "Owners": "Tulajdonosok",
-        "Home": "Főoldal"
-    }
+    "Ferrier": "Patkolás",
+    "Home": "Főoldal",
+    "Horse": "Ló",
+    "horse": "ló",
+    "Horses": "Lovak",
+    "horses": "lovak",
+    "Owners": "Tulajdonosok",
+    "Vet": "Állatorvos",
+    "welcome_msg": "Stabelity, rendet tart a lovardában"
+}
