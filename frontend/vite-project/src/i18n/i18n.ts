@@ -25,6 +25,10 @@ i18next
 .init({
     resources,
     fallbackLng: 'en', 
+    detection: {
+      order: ['cookie','htmlTag', 'path' ],
+      caches: ['cookie']
+    }
 });
 
 export default i18next;
