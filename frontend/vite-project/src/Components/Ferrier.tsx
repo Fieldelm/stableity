@@ -1,8 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Ferrier = () => {
+  const { t } = useTranslation();
+
   return (
-    <div>Ferrier</div>
+    <div>{t('Ferrier')}</div>
   )
 }
 

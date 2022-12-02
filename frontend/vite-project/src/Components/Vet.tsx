@@ -1,8 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Vet = () => {
+  const { t } = useTranslation();
+
   return (
-    <div>Vet</div>
+    <div>{t('Vet')}</div>
   )
 }
 

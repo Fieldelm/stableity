@@ -9,10 +9,7 @@ import Owners from './Components/Owners';
 import Vet from './Components/Vet';
 
 import Flag from 'react-world-flags';
-//import './i18n/i18n';
 import { useTranslation } from 'react-i18next';
-//import { availableLangs } from './i18n/i18n';
-
 
 
 const App = () => {
