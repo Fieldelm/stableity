@@ -20,13 +20,13 @@ const Navbar = (props: NavbarProps) => {
     <nav className='navbar'>
       <ul className='navbar__list'>
         <Link className='navbar__list__logo' to='/'>LOGO</Link>
-              {props.pages.map((page: Page, index: number) => (
-            <li className='navbar__list__item'>
-            <NavLink className='navbar__list__item__link' key={index} to={page.route}>{page.name}
+        {props.pages.map((page: Page, index: number) => (
+          <li className='navbar__list__item' key={index} >
+            <NavLink className='navbar__list__item__link' to={page.route}>{page.name}
             </NavLink>
-            </li>
-          ))}
-       
+          </li>
+        ))}
+
       </ul>
 
     </nav>
