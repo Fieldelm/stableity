@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './style/index.css';
+import '/home/reka/Stableity/frontend/vite-project/src/i18n/i18n.ts';
 
-import i18next from "i18next";
+
+/* import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpApi from 'i18next-http-backend';
 import { useTranslation } from 'react-i18next';
@@ -26,10 +28,10 @@ i18next
       caches: ['cookie']
     },
      backend: {
-     loadPath: './i18n/{{lng}}/translation.json',
+     loadPath: './i18n/{lng}/translation.json',
    },
   })
-
+ */
   
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

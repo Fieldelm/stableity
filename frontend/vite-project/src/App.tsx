@@ -9,9 +9,9 @@ import Owners from './Components/Owners';
 import Vet from './Components/Vet';
 
 import Flag from 'react-world-flags';
-import './i18n/i18n';
+//import './i18n/i18n';
 import { useTranslation } from 'react-i18next';
-import { availableLangs } from './i18n/i18n';
+//import { availableLangs } from './i18n/i18n';
 
 
 
@@ -19,12 +19,12 @@ const App = () => {
 
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (event: any) => {
-    i18n.changeLanguage(event.target.value);
-    console.log(event.target.value);
+  const changeLanguage = (langCode: string): void => {
+    i18n.changeLanguage(langCode);
+    console.log(`${langCode} is clicked`);
   }
 
-  const langs : language [] = [
+  const langs: language[] = [
     {
       code: 'hu',
       name: 'Magyar',
@@ -37,7 +37,7 @@ const App = () => {
     }
   ]
 
-  
+
 
   const pages: Page[] = [
     {
@@ -56,12 +56,12 @@ const App = () => {
       element: <Ferrier />
     },
     {
-      name: t('Veterinary'),
+      name: t('Vet'),
       route: '/vet',
       element: <Vet />
     },
     {
-      name: t('Veterinary'),
+      name: t('Owners'),
       route: '/owners',
       element: <Owners />
     }
@@ -75,10 +75,10 @@ const App = () => {
         <Navbar pages={pages} />
 
         <div className='content'>
-{t('welcome_msg')}
+          {t('horses')}
           <div className='flag-container'>
             {langs.map((lan: any, index: number) => (
-              <Flag key={index} code={lan.country_code} value={lan.code} onClick={changeLanguage} />
+              <Flag key={index} code={lan.country_code} onClick={() => changeLanguage(lan.code)} />
             ))}
           </div>
           <Routes>
