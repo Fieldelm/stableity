@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-abstract class Person {
+public class Person {
 
     private String name;
     private Role role;
