@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import Stable from './Components/Stable/Stable';
 
 
+
 const App = () => {
 
   const { t, i18n } = useTranslation();
@@ -75,7 +76,7 @@ const App = () => {
             ))}
           </div>
           <Routes>
-            <Route path='/' element= <Home/> />
+
             {mainPages.map((page: Page, index: number) => (
               <Route key={index} path={page.route} element={page.element} />
             ))}
