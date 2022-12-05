@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Horses from './Components/Horses/Horses';
-import Ferrier from './Components/Horses/Ferrier';
+import Ferrier from './Components/Horses/Farrier';
 import Owners from './Components/Owners';
 import Vet from './Components/Horses/Vet';
 
