@@ -6,6 +6,8 @@
     "Horses": "Lovak",
     "horses": "lovak",
     "Owners": "Tulajdonosok",
+    "Stable" : "Lovarda",
+    "stable" :"lovarda",
     "Vet": "Állatorvos",
     "welcome_msg": "Stabelity, rendet tart a lovardában"
 }

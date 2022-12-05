@@ -6,6 +6,8 @@
     "Horses": "Horses",
     "horses": "horses",
     "Owners": "Owners",
+    "Stable" : "Stable",
+    "stable" :"stable",
     "Vet": "Veterinary",
     "welcome_msg": "Stableity keeps your stable organized"
 }

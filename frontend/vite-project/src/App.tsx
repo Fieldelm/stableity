@@ -3,13 +3,14 @@ import './style/App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import Horses from './Components/Horses';
-import Ferrier from './Components/Ferrier';
+import Horses from './Components/Horses/Horses';
+import Ferrier from './Components/Horses/Ferrier';
 import Owners from './Components/Owners';
-import Vet from './Components/Vet';
+import Vet from './Components/Horses/Vet';
 
 import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
+import Stable from './Components/Stable/Stable';
 
 
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
 
 
 
-  const pages: Page[] = [
+  const mainPages: Page[] = [
     {
       name: t('Home'),
       route: '/',
@@ -48,15 +49,11 @@ const App = () => {
       element: <Horses />
     },
     {
-      name: t('Ferrier'),
-      route: '/ferrier',
-      element: <Ferrier />
+      name: t('Stable'),
+      route: '/stable',
+      element: <Stable />
     },
-    {
-      name: t('Vet'),
-      route: '/vet',
-      element: <Vet />
-    },
+    
     {
       name: t('Owners'),
       route: '/owners',
@@ -69,7 +66,7 @@ const App = () => {
     <div>
       <BrowserRouter>
 
-        <Navbar pages={pages} />
+        <Navbar pages={mainPages} />
 
         <div className='content'>
           <div className='flag-container'>
@@ -78,7 +75,8 @@ const App = () => {
             ))}
           </div>
           <Routes>
-            {pages.map((page: Page, index: number) => (
+            <Route path='/' element= <Home/> />
+            {mainPages.map((page: Page, index: number) => (
               <Route key={index} path={page.route} element={page.element} />
             ))}
           </Routes>
