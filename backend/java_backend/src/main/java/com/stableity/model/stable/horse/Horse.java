@@ -1,4 +1,4 @@
-package com.stableity.model.horse;
+package com.stableity.model.stable.horse;
 
 import com.stableity.model.person.person_children.Owner;
 import com.stableity.model.person.Person;
@@ -45,7 +45,7 @@ public class Horse {
     private String color;
 
     private LocalDate entryDate;
-    private LocalDate leaveDate;
+
 
     public void setEntryDate(int year, int month, int day) {
         this.entryDate = LocalDate.of(year, month, day);

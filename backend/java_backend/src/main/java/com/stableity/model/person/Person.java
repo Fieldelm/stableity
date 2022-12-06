@@ -1,16 +1,13 @@
 package com.stableity.model.person;
 
-import com.stableity.model.horse.Horse;
+import com.stableity.model.stable.horse.Horse;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.lang.reflect.Member;
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 //import java.util.*;
 
 @Getter

@@ -1,4 +1,4 @@
-package com.stableity.model.horse;
+package com.stableity.model.stable.horse;
 
 public enum Gender {
     MARE,
