@@ -1,6 +1,6 @@
 package com.stableity.model.horse;
 
-import com.stableity.model.person.Owner;
+import com.stableity.model.person.person_children.Owner;
 import com.stableity.model.person.Person;
 import jakarta.persistence.*;
 import lombok.Getter;

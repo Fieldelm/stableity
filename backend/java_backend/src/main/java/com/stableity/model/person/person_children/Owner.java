@@ -1,6 +1,8 @@
-package com.stableity.model.person;
+package com.stableity.model.person.person_children;
 
 import com.stableity.model.horse.Horse;
+import com.stableity.model.person.Person;
+import com.stableity.model.person.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,10 +21,7 @@ public class Owner extends Person {
     @GeneratedValue
     private UUID id;
 
-
-    public Owner(String name) {
-        super(name);
+    public Owner(String name, Role mainRole) {
+        super(name, mainRole);
     }
-
-
 }

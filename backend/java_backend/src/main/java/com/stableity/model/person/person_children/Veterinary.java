@@ -1,5 +1,7 @@
-package com.stableity.model.person;
+package com.stableity.model.person.person_children;
 
+import com.stableity.model.person.Person;
+import com.stableity.model.person.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,17 +14,13 @@ import java.util.UUID;
 @Getter
 @Entity
 @NoArgsConstructor
-public class Veterinary extends Person{
+public class Veterinary extends Person {
     @Id
     @GeneratedValue
     private UUID id;
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public Veterinary(String name) {
-        super(name);
+    public Veterinary(String name, Role mainRole) {
+        super(name, mainRole);
     }
 
     //TODO add methods and fields

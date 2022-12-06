@@ -29,11 +29,13 @@ public class Person {
     private Set<Horse> horses;
 
 
-    public Person(String name) {
+    public Person(String name, Role mainRole) {
         this.name = name;
         this.phoneNr = 0;
         this.email = null;
         this.horses = new HashSet<>();
+        this.roles = new HashSet<>();
+        addRole(mainRole);
     }
     @ElementCollection
     @Enumerated(EnumType.STRING)
@@ -41,6 +43,10 @@ public class Person {
 
     public void addHorse(Horse horse){
         this.horses.add(horse);
+    }
+    
+    public void addRole(Role role){
+        this.roles.add(role);
     }
 
 

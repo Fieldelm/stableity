@@ -1,5 +1,7 @@
-package com.stableity.model.person;
+package com.stableity.model.person.person_children;
 
+import com.stableity.model.person.Person;
+import com.stableity.model.person.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -13,15 +15,15 @@ import java.util.UUID;
 @Getter
 @Entity
 @NoArgsConstructor
-public class Staff extends Person{
+public class Staff extends Person {
 
-    public Staff(String name) {
-        super(name);
-    }
-
-    @Id
+     @Id
     @Column(name = "id", nullable = false)
     private UUID id;
+
+    public Staff(String name, Role mainRole) {
+        super(name, mainRole);
+    }
 
     private LocalDate entryDate;
     private LocalDate leaveDate;
