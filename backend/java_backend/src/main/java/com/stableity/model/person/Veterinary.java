@@ -1,0 +1,29 @@
+package com.stableity.model.person;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Getter
+@Entity
+@NoArgsConstructor
+public class Veterinary extends Person{
+    @Id
+    @GeneratedValue
+    private UUID id;
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public Veterinary(String name) {
+        super(name);
+    }
+
+    //TODO add methods and fields
+}

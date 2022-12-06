@@ -1,14 +1,13 @@
 package com.stableity.model.horse;
 
+import com.stableity.model.person.Owner;
 import com.stableity.model.person.Person;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Getter
@@ -17,34 +16,44 @@ import java.util.UUID;
 @NoArgsConstructor
 
 public class Horse {
+
     private String name;
 
-    public Horse(String name) {
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
+
+    public Horse(String name, Person owner) {
+
         this.name = name;
     }
+
 
     @Id
     @GeneratedValue
     UUID id;
 
     private String FEINr;
-    // private Person owner; TODO create person inheritances
 
     private int bornYear;
+
+    @Enumerated(EnumType.STRING)
     private Gender gender;
+
     private String father;
     private String maternalGrandFather;
     private String color;
-    private Date entry;
 
-/*
-    identification?: string,
-    owner?: Owner,
-    bornYear?: number,
-    gender?: string,
-    father?: string,
-    maternalGrandfather?: string,
-    color?: string,
-    entry?: Date,*/
+    private LocalDate entryDate;
+    private LocalDate leaveDate;
+
+    public void setEntryDate(int year, int month, int day) {
+        this.entryDate = LocalDate.of(year, month, day);
+    }
+
+    public void setLeaveDate(int year, int month, int day) {
+        this.entryDate = LocalDate.of(year, month, day);
+    }
+
 }
 
