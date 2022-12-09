@@ -19,8 +19,8 @@ public class Veterinary extends Person {
     @GeneratedValue
     private UUID id;
 
-    public Veterinary(String name, Role mainRole) {
-        super(name, mainRole);
+    public Veterinary(String name) {
+        super(name);
     }
 
     //TODO add methods and fields

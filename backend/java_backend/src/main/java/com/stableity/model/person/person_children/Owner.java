@@ -18,7 +18,7 @@ public class Owner extends Person {
     @GeneratedValue
     private UUID id;
 
-    public Owner(String name, Role mainRole) {
-        super(name, mainRole);
+    public Owner(String name) {
+        super(name);
     }
 }

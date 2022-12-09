@@ -8,44 +8,65 @@ import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 //import java.util.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@MappedSuperclass
+@Entity
+//@MappedSuperclass
 public class Person {
+
+    @Id
+    @GeneratedValue
+    private UUID id;
 
     private String name;
 
-    private int phoneNr;
+    private int phoneNr = 0;
 
-    private String email;
+    private String email = null;
 
     @OneToMany
-    private Set<Horse> horses;
+    private Set<Horse> horses = new HashSet<>();
+    ;
 
+    private boolean hasHorse = false;
+
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles = new HashSet<>();
 
     public Person(String name, Role mainRole) {
         this.name = name;
-        this.phoneNr = 0;
-        this.email = null;
-        this.horses = new HashSet<>();
-        this.roles = new HashSet<>();
         addRole(mainRole);
     }
-    @ElementCollection
-    @Enumerated(EnumType.STRING)
-    private Set<Role> roles;
 
-    public void addHorse(Horse horse){
+    public void addHorse(Horse horse) {
         this.horses.add(horse);
+        this.hasHorse = true;
     }
-    
-    public void addRole(Role role){
+
+    public void removeHorse(Horse horse) {
+        if (this.horses.contains(horse)) {
+            this.horses.remove(horse);
+            if (this.horses.size() == 0) {
+                hasHorse = false;
+            }
+        }
+    }
+
+    public void addRole(Role role) {
         this.roles.add(role);
     }
 
+    public void removeRole(Role role) {
+        this.roles.remove(role);
+    }
 
+    public boolean hasRole(Role role){
+        return this.roles.contains(role);
+    }
 
 }

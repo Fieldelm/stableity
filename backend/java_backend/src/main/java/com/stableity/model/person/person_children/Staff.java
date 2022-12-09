@@ -21,8 +21,8 @@ public class Staff extends Person {
     @Column(name = "id", nullable = false)
     private UUID id;
 
-    public Staff(String name, Role mainRole) {
-        super(name, mainRole);
+    public Staff(String name) {
+        super(name);
     }
 
     private LocalDate entryDate;

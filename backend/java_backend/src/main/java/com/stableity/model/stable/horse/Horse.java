@@ -37,8 +37,7 @@ public class Horse {
 
     private int bornYear;
 
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+    private String gender;
 
     private String father;
     private String maternalGrandFather;

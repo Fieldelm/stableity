@@ -20,8 +20,8 @@ public class Farrier extends Person {
     @GeneratedValue
     private UUID id;
 
-    public Farrier(String name, Role mainRole) {
-        super(name, mainRole);
+    public Farrier(String name) {
+        super(name);
     }
 
 
