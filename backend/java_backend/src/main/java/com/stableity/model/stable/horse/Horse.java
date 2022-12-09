@@ -50,9 +50,6 @@ public class Horse {
         this.entryDate = LocalDate.of(year, month, day);
     }
 
-    public void setLeaveDate(int year, int month, int day) {
-        this.entryDate = LocalDate.of(year, month, day);
-    }
 
 }
 
