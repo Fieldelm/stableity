@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Getter
-@Entity
+//@Entity
 @NoArgsConstructor
 public class Staff extends Person {
 
@@ -21,9 +21,7 @@ public class Staff extends Person {
     @Column(name = "id", nullable = false)
     private UUID id;
 
-    public Staff(String name) {
-        super(name);
-    }
+
 
     private LocalDate entryDate;
     private LocalDate leaveDate;

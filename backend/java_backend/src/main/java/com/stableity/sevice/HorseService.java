@@ -23,7 +23,7 @@ public class HorseService {
         horseRepo.saveAndFlush(new Horse(horseName, owner));
     }
 
-    public Horse getHorseByName(String horseName){
+    public List<Horse> getHorsesByName(String horseName){
         return horseRepo.findByName(horseName).get();
     }
 

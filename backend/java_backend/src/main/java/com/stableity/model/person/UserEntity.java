@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @Entity
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue
@@ -23,7 +23,7 @@ public class User {
     @OneToOne
     private Person memberShipPersonality;
 
-    public User(String email, String password) {
+    public UserEntity(String email, String password) {
         this.email = email;
         this.password = password;
     }

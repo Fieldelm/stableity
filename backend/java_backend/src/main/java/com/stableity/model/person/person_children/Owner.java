@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Getter
-@Entity
+//@Entity
 @NoArgsConstructor
 
 public class Owner extends Person {
@@ -18,7 +18,5 @@ public class Owner extends Person {
     @GeneratedValue
     private UUID id;
 
-    public Owner(String name) {
-        super(name);
-    }
+
 }

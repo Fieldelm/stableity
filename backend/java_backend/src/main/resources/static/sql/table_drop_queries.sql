@@ -1,0 +1,11 @@
+drop TABLE IF EXISTS person_horses;
+drop TABLE IF EXISTS person_roles;
+drop TABLE IF EXISTS stable_farriers;
+drop TABLE IF EXISTS stable_horses;
+drop TABLE IF EXISTS stable_owners;
+drop TABLE IF EXISTS stable_staff;
+drop TABLE IF EXISTS stable_vets;
+drop TABLE IF EXISTS stable;
+drop TABLE IF EXISTS horse;
+drop TABLE IF EXISTS user_entity;
+drop TABLE IF EXISTS person;

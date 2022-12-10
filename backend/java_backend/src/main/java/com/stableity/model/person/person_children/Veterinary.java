@@ -12,16 +12,14 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Getter
-@Entity
+//@Entity
 @NoArgsConstructor
 public class Veterinary extends Person {
     @Id
     @GeneratedValue
     private UUID id;
 
-    public Veterinary(String name) {
-        super(name);
-    }
+
 
     //TODO add methods and fields
 }

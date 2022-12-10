@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Getter
-@Entity
+//@Entity
 @NoArgsConstructor
 public class Farrier extends Person {
 
@@ -20,9 +20,7 @@ public class Farrier extends Person {
     @GeneratedValue
     private UUID id;
 
-    public Farrier(String name) {
-        super(name);
-    }
+
 
 
     public void setId(UUID id) {
