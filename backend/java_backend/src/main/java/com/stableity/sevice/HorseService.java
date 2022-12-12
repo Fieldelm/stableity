@@ -2,12 +2,11 @@ package com.stableity.sevice;
 
 import com.stableity.model.person.Person;
 import com.stableity.model.stable.horse.Horse;
-import com.stableity.persistance.persis_stable.HorseRepository;
-import com.stableity.persistance.persist_person.PersonRepository;
+import com.stableity.repositories.persis_stable.HorseRepository;
+import com.stableity.repositories.persist_person.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Field;
 import java.util.List;
 import java.util.UUID;
 

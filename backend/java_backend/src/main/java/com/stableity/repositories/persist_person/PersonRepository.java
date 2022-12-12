@@ -1,4 +1,4 @@
-package com.stableity.persistance.persist_person;
+package com.stableity.repositories.persist_person;
 
 import com.stableity.model.person.Person;
 import org.springframework.data.jpa.repository.JpaRepository;

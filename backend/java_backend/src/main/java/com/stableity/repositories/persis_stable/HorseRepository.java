@@ -1,4 +1,4 @@
-package com.stableity.persistance.persis_stable;
+package com.stableity.repositories.persis_stable;
 
 import com.stableity.model.stable.horse.Horse;
 import org.springframework.data.jpa.repository.JpaRepository;
