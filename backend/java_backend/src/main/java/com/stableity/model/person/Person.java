@@ -22,7 +22,8 @@ public class Person {
     @GeneratedValue
     private UUID id;
 
-    private String name;
+    private String nickName;
+    private String name = null;
 
     private int phoneNr = 0;
 
@@ -30,7 +31,6 @@ public class Person {
 
     @OneToMany
     private Set<Horse> horses = new HashSet<>();
-    ;
 
     private boolean hasHorse = false;
 
@@ -38,8 +38,8 @@ public class Person {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
 
-    public Person(String name, Role mainRole) {
-        this.name = name;
+    public Person(String nickName, Role mainRole) {
+        this.nickName = nickName;
         addRole(mainRole);
     }
 
@@ -65,7 +65,7 @@ public class Person {
         this.roles.remove(role);
     }
 
-    public boolean hasRole(Role role){
+    public boolean hasRole(Role role) {
         return this.roles.contains(role);
     }
 

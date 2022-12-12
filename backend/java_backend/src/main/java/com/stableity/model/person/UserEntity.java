@@ -20,7 +20,9 @@ public class UserEntity {
     private String email;
     private String password;
 
+
     @OneToOne
+    @JoinColumn(name = "member_ship_personality_id")
     private Person memberShipPersonality;
 
     public UserEntity(String email, String password) {

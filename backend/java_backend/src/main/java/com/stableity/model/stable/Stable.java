@@ -24,7 +24,9 @@ public class Stable {
     @GeneratedValue
     private UUID id;
 
+
     @ManyToOne
+    @JoinColumn(name = "chief_id")
     private Person chief;
 
     @OneToMany
@@ -41,6 +43,10 @@ public class Stable {
 
     @ManyToMany
     private Set<Person> farriers;
+
+    public void setChief(Person chief) {
+        this.chief = chief;
+    }
 
 
     public Stable(Person chief) {

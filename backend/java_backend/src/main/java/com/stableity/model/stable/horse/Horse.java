@@ -24,8 +24,8 @@ public class Horse {
     private Person owner;
 
     public Horse(String name, Person owner) {
-
         this.name = name;
+        this.owner = owner;
     }
 
 
@@ -33,18 +33,15 @@ public class Horse {
     @GeneratedValue
     UUID id;
 
-    private String FEINr;
-
     private int bornYear;
-
+    private String color;
     private String gender;
 
     private String father;
     private String maternalGrandFather;
-    private String color;
+    private String FEINr;
 
     private LocalDate entryDate;
-
 
     public void setEntryDate(int year, int month, int day) {
         this.entryDate = LocalDate.of(year, month, day);
