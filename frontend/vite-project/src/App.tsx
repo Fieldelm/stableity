@@ -2,16 +2,16 @@ import React, { Component, useState, ChangeEvent } from 'react';
 import './style/App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import Home from './Components/Home';
-import Horses from './Components/Horses';
-import Ferrier from './Components/Ferrier';
-import Owners from './Components/Owners';
-import Vet from './Components/Vet';
+import Home from './Components/pages/Home';
+import Horses from './Components/pages/Horses';
+import Ferrier from './Components/pages/Ferrier';
+import Owners from './Components/pages/Owners';
+import Vet from './Components/pages/Vet';
 
 import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
-import Register from './Components/Register';
-import Login from './Components/Login';
+import Register from './Components/pages/Register';
+import Login from './Components/pages/Login';
 
 
 const App = () => {
@@ -35,8 +35,6 @@ const App = () => {
       country_code: 'gb',
     }
   ]
-
-
 
   const pages: Page[] = [
     {
