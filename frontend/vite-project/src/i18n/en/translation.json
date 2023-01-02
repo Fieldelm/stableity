@@ -7,6 +7,7 @@
     "horses": "horses",
     "Login" : "Login",
     "Owners": "Owners",
+    "password" : "password", 
     "Register": "Register",
     "Vet": "Veterinary",
     "welcome_msg": "Stableity keeps your stable organized"
