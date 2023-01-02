@@ -10,6 +10,8 @@ import Vet from './Components/Vet';
 
 import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
+import Register from './Components/Register';
+import Login from './Components/Login';
 
 
 const App = () => {
@@ -61,6 +63,16 @@ const App = () => {
       name: t('Owners'),
       route: '/owners',
       element: <Owners />
+    },
+    {
+      name: t('Register'),
+      route: '/register',
+      element: <Register />
+    },
+    {
+      name: t('Login'),
+      route: '/login',
+      element: <Login />
     }
   ]
 

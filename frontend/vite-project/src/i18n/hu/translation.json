@@ -5,7 +5,9 @@
     "horse": "ló",
     "Horses": "Lovak",
     "horses": "lovak",
+    "Login" : "Bejelentkezés",
     "Owners": "Tulajdonosok",
+    "Register": "Regisztráció",
     "Vet": "Állatorvos",
     "welcome_msg": "Stabelity, rendet tart a lovardában"
 }

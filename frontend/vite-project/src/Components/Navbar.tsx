@@ -26,7 +26,7 @@ const Navbar = (props: NavbarProps) => {
             </NavLink>
           </li>
         ))}
-
+        
       </ul>
 
     </nav>
