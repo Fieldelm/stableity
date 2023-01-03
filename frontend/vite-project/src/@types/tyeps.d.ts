@@ -9,3 +9,8 @@ type Page = {
     route: string,
     element: JSX.Element
   }
+
+type User = {
+    email: string,
+    password : string
+}

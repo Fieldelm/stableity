@@ -82,16 +82,19 @@ const App = () => {
         <Navbar pages={pages} />
 
         <div className='content'>
-          <div className='flag-container'>
+          <div className='content__flag-container'>
             {langs.map((lan: any, index: number) => (
               <Flag key={index} code={lan.country_code} onClick={() => changeLanguage(lan.code)} />
             ))}
           </div>
+
+          <div className='content__page'>
           <Routes>
             {pages.map((page: Page, index: number) => (
               <Route key={index} path={page.route} element={page.element} />
             ))}
           </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </div>

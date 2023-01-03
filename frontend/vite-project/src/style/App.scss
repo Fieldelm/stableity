@@ -2,61 +2,6 @@
 @import '__colors';
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
-/*  #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-
-}
-
-.navbar {
-  width: 100%;
-  display: inline-block;
-}
-
- NAVIGATION BAR
- */
-
-
 
 html {
   background-color: $glacier;
@@ -71,8 +16,10 @@ $navbarLinkPadding: 0.2rem;
 
 $navbarLinkFontSize: 1.1rem;
 
+$flagImageHeight : 1rem;
 
-$contentPadding: $navbarTopPadding * 3;
+
+$contentPadding: $navbarTopPadding * 2.5;
 
 .navbar {
   overflow: hidden;
@@ -146,20 +93,27 @@ $contentPadding: $navbarTopPadding * 3;
   margin-top: $contentPadding;
   color: black;
   position: relative;
-}
+  gap: 2 rem;
 
-.flag-container{
-  display:inline-flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  float: right;
-  margin-right: 1rem;
+  &__flag-container{
+    display:inline-flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    float: right;
+    margin-right: $flagImageHeight;
+      
+  
+    img{
+      height: $flagImageHeight;
+  
+     &:hover{
+      opacity: 30%;
+     }
+    }
+  }
 
-  img{
-    height: 1rem;
-
-   &:hover{
-    opacity: 30%;
-   }
+  &__page {
+    padding: $flagImageHeight;
   }
 }
+
