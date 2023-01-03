@@ -64,8 +64,13 @@ html {
 
 $navbarHeight : 2rem;
 $navbarTopPadding : 1.3rem;
-$navbarRightPadding : 4rem;
-$navbarLeftPadding : 1rem;
+$navbarRightPadding : 1.5rem;
+$navbarLeftPadding : 1.5rem;
+
+$navbarLinkPadding: 0.2rem;
+
+$navbarLinkFontSize: 1.1rem;
+
 
 $contentPadding: $navbarTopPadding * 3;
 
@@ -109,13 +114,18 @@ $contentPadding: $navbarTopPadding * 3;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: $navbarLinkFontSize;
       height: 100%;
-
+    
+      
 
       &__link {
         color: $glacier;
         text-decoration: none;
+        background-color: $itemBackground;
+        padding: $navbarLinkPadding;
+        border-radius: 8%;
+         
 
         &:hover {
           background-color: $mallowHover;
