@@ -1,12 +1,12 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
+
 import { useState } from 'react';
 
-const useForm = (callback: any, initialState= {}) => {
+const useForm = (callback: any, initialState = {}) => {
   
-    const { t } = useTranslation();
-    const [values, setValues] = useState(initialState);
 
+    const [values, setValues] = useState(initialState);
+ 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValues({ ...values, [event.target.name]: 
     event.target.value });
